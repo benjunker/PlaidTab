@@ -1,0 +1,15 @@
+{
+  "name": "PlaidTab",
+  "manifest_version": 2,
+  "version": "1.0",
+  "description": "A Chrome extension new tab dashboard created for CMU students.",
+  "browser_action": {
+  	"default_icon": "img/icon.jpg"
+  },
+  "chrome_url_overrides": {
+    "newtab": "html/myPage.html"
+  },
+  "permissions": [
+    "tabs"
+  ]
+}
