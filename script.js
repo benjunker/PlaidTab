@@ -15,6 +15,10 @@ function saveChanges() {
         });
       }
 
+function extractName() {
+
+}
+
 function healthyResourcesButton() {
   console.log("hi");
 

@@ -2,9 +2,10 @@ body {
 	background-image: url("img/background-photo.JPG");
 	background-size: 100% auto;
     font-family: "Avenir Next";
+    position: relative;
 }
 
-h1, h2 {
+h1, h2, h3 {
 	color: #FFF;
 }
 
@@ -34,4 +35,25 @@ a {
 label {
 	color: #FFF;
 	font-size: 15px;
+}
+
+div#healthy_resources{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+}
+
+div#settings{
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    
+}
+
+div#events{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    
 }
