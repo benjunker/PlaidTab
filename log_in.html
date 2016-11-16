@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<script src="jquery.min.js"></script> <!-- Including jQuery -->
 	<script src="script.js"></script> <!-- Our script file -->
+	
 	<title>PlaidTab</title>
 
 </head>
@@ -15,7 +16,7 @@
 		<br>
 		<form>
 			<label for="name">Your Name:</label>
-			<input type="text" name="firstname">
+			<input type="text" name=a>
 			<br><br><br>
 
 			<h2>What are your interests?</h2>
@@ -34,7 +35,8 @@
 			<br>
 			<br><br>
 
-			<a id="begin_button" href="dashboard_home.html" onclick="extractName();">Let's Begin</a>
+			<!-- <a id="begin_button" href="dashboard_home.html" onclick="extractName(firstname.value);">Let's Begin</a> -->
+			<input type=button id="begin_button" value="Let's Begin!"  href="dashboard_home.html" onClick='javascript:extractName(a.value)'>
 		
 		</form>
 
