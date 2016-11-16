@@ -20,7 +20,7 @@ input[type=text] {
 }
 
 
-input[type=submit] {
+a {
     background-color: #7e7e7e;
     border: none;
     color: white;

@@ -7,7 +7,7 @@
   	"default_icon": "img/icon.jpg"
   },
   "chrome_url_overrides": {
-    "newtab": "myPage.html"
+    "newtab": "log_in.html"
   },
   "permissions": [
     "tabs",
