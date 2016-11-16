@@ -96,8 +96,8 @@ button#edit{
 }
 
 div#events{
-    position: absolute;
+    position: fixed;
     top: 0px;
-    right: 0px;
+    right: -200px;
     
 }
