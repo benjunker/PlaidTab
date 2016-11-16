@@ -1,5 +1,7 @@
 var eventStatus = "A"
 var onlyHW = false;
+var quote = true;
+var events = true;
 // need to modify this
 function saveChanges() {
         // Get a value saved in a form.
@@ -59,7 +61,8 @@ function downButton(){
 
 function toggle() {
     if (!onlyHW) {
-        document.getElementById("toggleHW").value = "No?";
+        // document.getElementById("toggleHW").value = "No?";
+        document.getElementById("eventStatusText").innerHTML = "Currently Displaying Only Health & Wellness Events"
         document.getElementById('event1').children[0].src = "img/events/meditation.png";
         document.getElementById('event1').children[1].innerHTML = "Meditation";
         document.getElementById('event2').children[0].src = "img/events/paws_to_relax.png";
@@ -69,9 +72,30 @@ function toggle() {
         eventStatus = "C";
         onlyHW = true
     } else {
+      document.getElementById("eventStatusText").innerHTML = "Currently Displaying All Events"
       onlyHW = false;
-      document.getElementById("toggleHW").value = "Yes?";
+      // document.getElementById("toggleHW").value = "Yes?";
       eventStatus = "B";
       downButton();
     }
+}
+
+function toggleQuote() {
+  if (quote) {
+    quote = false;
+    document.getElementById('quote').innerHTML = '';
+  } else {
+    quote = true;
+    document.getElementById('quote').innerHTML = ' "My heart is in the work" -- Andrew Carnegie ';
+  }
+}
+
+function toggleEvents() {
+  if (events) {
+    events = false;
+    document.getElementById('events').style.display = 'none';
+  } else {
+    events = true;
+    document.getElementById('events').style.display = '';
+  }
 }

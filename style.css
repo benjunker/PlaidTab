@@ -77,8 +77,8 @@ button#settings{
 }
 
 img#settings{
-    width: 30%;
-    height: 30%;
+    width: 20px;
+    height: 20px;
 }
 
 img.event{
@@ -106,6 +106,15 @@ div#events{
     right: -200px;
     
 }
+
+/*button.settingsButton{
+    width: 7%;
+    height: 7%;
+}*/
+
+
+
+
 
 /*Base Code From: http://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal*/
 .modal {

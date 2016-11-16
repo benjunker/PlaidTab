@@ -12,16 +12,50 @@
 <body>
 	<div id="content" class="center">
 		<!-- Base code from: http://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal -->
-		<div id="myModal" class="modal">
+		<!-- Events Modal -->
+		<div id="eventModal" class="modal">
 
 		  <!-- Modal content -->
 		  <div class="modal-content">
-		    <span class="close">×</span>
-		    <p>Display Only Health and Wellness Events?</p><br>
-		    <input type=button id="toggleHW" onclick="javascript:toggle();" value="Yes?"></button>
+		    <span class="close" id="closeEvents">×</span>
+		    <p id="eventStatusText">Currently Displaying All Events</p><br>
+		    <input type=button id="toggleHW" onclick="javascript:toggle();" value="Change?"></button>
 		  </div>
 
 		</div>
+
+
+		<!-- Settings Modal -->
+		<div id="settingsModal" class="modal">
+
+		  <!-- Modal content -->
+		  <div class="modal-content">
+		    <span class="close" id="closeSettings">×</span>
+		    <p id="toggleQuote">Toggle Quote</p>
+		    <input type=button id="toggleQuote" onclick="javascript:toggleQuote();" value="Toggle"></button>
+		    <p id="toggleEvents">Toggle Events</p>
+		    <input type=button id="toggleEvents" onclick="javascript:toggleEvents();" value="Toggle"></button>
+		   
+		  </div>
+
+		</div>
+
+
+		<!-- Healthy Resources Modal -->
+		<div id="hrModal" class="modal">
+
+		  <!-- Modal content -->
+		  <div class="modal-content">
+		  	<span class="close" id="closeHR">×</span>
+		    <p>CMU Group-X Class Schedule</p>
+		     <p><a href="http://static.psbin.com/s/2/32vzzdhqws2yka/classschedule.pdf" text="black">CMU Group-X Class Schedule</a></p>
+		   
+		  </div>
+
+		</div>
+
+
+
 		<h1 id="welcome">Welcome to PlaidTab!</h1>
 		<p id="quote"> "My heart is in the work" -- Andrew Carnegie </p> 
 		<br>
@@ -31,7 +65,7 @@
 		<a id="healthy_resources" href="#" onclick="healthyResourcesButton();">Healthy Resources</a>
 	</div>
 	<div id="settings">
-		<button type="button" id="settings" onclick="settingsButton();"><img id="settings" src="img/settings.png"></button>
+		<button type="button" id="settingsButton" onclick="settingsButton();"><img id="settings" src="img/settings.png"></button>
 	</div>
 
 	<div id="events" class="center">
