@@ -9,6 +9,15 @@ h1, h2, h3 {
 	color: #FFF;
 }
 
+h3#event_heading{
+    float: left;
+}
+
+p#quote{
+    color:#FFF;
+    font-style: italic;
+}
+
 .center {
 	text-align: center;
 }
@@ -22,10 +31,14 @@ input[type=text] {
 }
 
 
-a {
+a{
+   color: white;
+   font-weight: bold; 
+}
+
+a#begin_button{
     background-color: #7e7e7e;
     border: none;
-    color: white;
     padding: 16px 32px;
     text-decoration: none;
     margin: 4px 2px;
@@ -44,11 +57,42 @@ div#healthy_resources{
 
 }
 
+a#healthy_resources{
+
+}
+
 div#settings{
     position: fixed;
     bottom: 10px;
     left: 10px;
     
+}
+
+button#settings{
+    background: transparent;
+    border-color: transparent;
+    width: 15%;
+    height: 30%;
+
+}
+
+img#settings{
+    width: 30%;
+    height: 30%;
+}
+
+img.event{
+    width: 15%;
+    height: 15%;   
+}
+
+p.event{
+    color: white;
+}
+
+button#edit{
+    background: transparent;
+    border-color: transparent;
 }
 
 div#events{
