@@ -4,7 +4,7 @@
 
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<script src="jquery.min.js"></script> <!-- Including jQuery -->
-	<script src=""></script> <!-- Our script file -->
+	<script src="script.js"></script> <!-- Our script file -->
 	<title>PlaidTab</title>
 
 </head>
@@ -12,10 +12,30 @@
 <body>
 	<div id="content" class="center">
 		<h1>Welcome to PlaidTab!</h1>
+		<p id="quote"> "My heart is in the work" -- Andrew Carnegie </p> 
 		<br>
-		
-		<h1>Dashboard home page goes here!</h1>
 
+	</div>
+	<div id="healthy_resources">
+		<a id="healthy_resources" href="#" onclick="healthyResourcesButton();">Healthy Resources</a>
+	</div>
+	<div id="settings">
+		<button type="button" id="settings" onclick="settingsButton();"><img id="settings" src="img/settings.png"></button>
+	</div>
+
+	<div id="events" class="center">
+		<div id="heading">
+			<h3>Campus Events</h3>
+			<button type="button" id="edit" onclick="eventEditButton();"><img id="edit" src="img/edit.png"></button>
+		</div>
+		<div id="event_imgs">
+			<img class="event" src="img/events/paws_to_relax.png">
+			<p class="event">Paws to Relax</p>
+			<img class="event" src="img/events/stop_hunger.png">
+			<p class="event">CMU Stops Hunger</p>
+			<img class="event" src="img/events/makonnen.png">
+			<p class="event">ILOVEMAKONNEN</p>
+		</div>
 	</div>
 
 </body>

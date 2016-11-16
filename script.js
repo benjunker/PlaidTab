@@ -14,3 +14,21 @@ function saveChanges() {
           message('Settings saved');
         });
       }
+
+function extractName() {
+
+}
+
+function healthyResourcesButton() {
+  console.log("hi");
+
+}
+
+function settingsButton() {
+  console.log("hi");
+
+}
+
+function eventEditButton(){
+  console.log("hi");
+}
