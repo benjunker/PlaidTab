@@ -5,6 +5,11 @@
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<script src="jquery.min.js"></script> <!-- Including jQuery -->
 	<script src="script.js"></script> <!-- Our script file -->
+	<script src="google_cal_events.js"></script> <!-- Script file for pull Google Cal events data -->
+
+	<script type = "text/javascript" 
+         src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
 	<title>PlaidTab</title>
 
 </head>
@@ -21,9 +26,9 @@
 		    <p id="eventStatusText">Currently Displaying All Events</p><br>
 		    <input type=button id="toggleHW" onclick="javascript:toggle();" value="Change?"></button>
 		  </div>
-
 		</div>
 
+	
 
 		<!-- Settings Modal -->
 		<div id="settingsModal" class="modal">
@@ -59,6 +64,16 @@
 		<h1 id="welcome">Welcome to PlaidTab!</h1>
 		<p id="quote"> "My heart is in the work" -- Andrew Carnegie </p> 
 		<br>
+
+
+		<div id = "stage" style = "background-color:#EEE;">
+         	Get Google Calendar event data from www.cmu.edu/events
+      		</div>
+		
+      		<input type = "button" id = "driver" value = "Load Data" />	
+
+
+		
 
 	</div>
 	<div id="healthy_resources">

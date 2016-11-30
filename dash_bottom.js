@@ -78,3 +78,13 @@ window.onclick = function(event) {
 
 //Notes
 // Some base code for modals from: http://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal
+
+
+
+
+
+
+
+
+
+
