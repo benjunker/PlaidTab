@@ -3,6 +3,11 @@
 document.getElementById("welcome").innerHTML = "Welcome to PlaidTab, "+sessionStorage.name+"!"
 
 
+//Quotes
+var quotes = ['"My heart is in the work" -- Andrew Carnegie', '"We cannot change the cards we are dealt,\njust how we play the hand.” -- Randy Pausch', '"It\'s not how hard you hit. It\'s how hard you get hit...and keep moving forward.” -- Randy Pausch']
+var quote = quotes[Math.floor(Math.random()*quotes.length)]
+document.getElementById('quote').innerHTML = quote
+
 
 //Event Modal
 
