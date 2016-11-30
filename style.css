@@ -34,7 +34,7 @@ a{
    font-weight: bold; 
 }
 
-input#begin_button, input#toggleHW{
+input#begin_button, input#toggleHW, input#load_data{
     background-color: #7e7e7e;
     color: white;
     border: none;

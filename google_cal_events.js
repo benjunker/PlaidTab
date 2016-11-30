@@ -3,7 +3,7 @@
 
 $(document).ready(function() {
 			
-  $("#driver").click(function(event){
+  $("#load_data").click(function(event){
     $.getJSON('https://www.googleapis.com/calendar/v3/calendars/andrew.cmu.edu_333234353933332d373938@resource.calendar.google.com/events?key=AIzaSyD8whTj2d-Qune9-DfAUoCS8FNbgMvTghg', function(data) {
       var result = [];
       var config;
