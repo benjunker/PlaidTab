@@ -2,6 +2,23 @@ var eventStatus = "A"
 var onlyHW = false;
 var quote = true;
 var events = true;
+
+
+
+// Sets the background photo to a randomly generating image
+window.onload = function() {
+  var rand = getRandomInt(0,1);
+  console.log(rand);
+  var photoOptions = ['img/background-photo1.JPG', 'img/background-photo2.jpg']
+  document.getElementById('body').style.backgroundImage = ("url(" + photoOptions[rand] + ")");
+}
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+
+
 // need to modify this
 function saveChanges() {
         // Get a value saved in a form.
