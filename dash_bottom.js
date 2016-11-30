@@ -59,6 +59,7 @@ var hrbtn = document.getElementById("healthy_resources");
 var hrspan = document.getElementById('closeHR');
 hrbtn.onclick = function() {
     hrmodal.style.display = "block";
+    
 }
 
 // When the user clicks on <span> (x), close the modal
