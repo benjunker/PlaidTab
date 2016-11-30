@@ -14,26 +14,35 @@
 	<div id="content" class="center">
 		<h1>Welcome to PlaidTab!</h1>
 		<br>
-		<form>
+		<form class="box">
+			<br>
 			<label for="name">Your Name:</label>
 			<input type="text" name=a>
-			<br><br><br>
+			<br><br>
 
 			<h2>What are your interests?</h2>
 
-			<input type="checkbox" name="cooking" value="Cooking"><label for="cooking">Cooking</label>
-			<br>
-			<input type="checkbox" name="club_events" value="Club Events"><label for="club_events">Club Events</label>
-			<br>
-			<input type="checkbox" name="campus_engagements" value="Campus Engagements"><label for="campus_engagements">Campus Engagements</label>
-			<br>
-			<input type="checkbox" name="group_fitness" value="Group Fitness"><label for="group_fitness">Group Fitness</label>
-			<br>
-			<input type="checkbox" name="motivational_quotes" value="Motivational Quotes"><label for="motivational_quotes">Motivational Quotes</label>
-			<br>
-			<input type="checkbox" name="campus_activities" value="Campus Activities"><label for="campus_activities">Campus Activities</label>
-			<br>
-			<br><br>
+			<div id="container">
+
+				<div id="col1">
+					<input id="setting" type="checkbox" name="cooking" value="Cooking"><label for="cooking">Cooking</label>
+					<br>
+					<input id="setting" type="checkbox" name="club_events" value="Club Events"><label for="club_events">Club Events</label>
+					<br>
+					<input id="setting" type="checkbox" name="campus_engagements" value="Campus Engagements"><label for="campus_engagements">Campus Engagements</label>
+					<br>
+				</div>
+
+				<div id="col2">
+					<input id="setting" type="checkbox" name="group_fitness" value="Group Fitness"><label for="group_fitness">Group Fitness</label>
+					<br>
+					<input id="setting" type="checkbox" name="motivational_quotes" value="Motivational Quotes"><label for="motivational_quotes">Motivational Quotes</label>
+					<br>
+					<input id="setting" type="checkbox" name="campus_activities" value="Campus Activities"><label for="campus_activities">Campus Activities</label>
+					<br>
+					<br><br>
+				</div>
+			</div>
 
 			<!-- <a id="begin_button" href="dashboard_home.html" onclick="extractName(firstname.value);">Let's Begin</a> -->
 			<input type=button id="begin_button" value="Let's Begin!"  href="dashboard_home.html" onClick='javascript:extractName(a.value)'>
