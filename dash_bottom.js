@@ -4,10 +4,6 @@ document.getElementById("welcome").innerHTML = "Welcome to PlaidTab, "+sessionSt
 
 
 
-
-
-
-
 //Event Modal
 
 var eventmodal = document.getElementById('eventModal');
