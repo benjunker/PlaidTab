@@ -15,3 +15,5 @@ $.ajax({
             }
          });
        }
+
+//this actually has cross domain request errors...... will pull json down locally for now, but need to fix later

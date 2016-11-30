@@ -61,6 +61,13 @@ div#healthy_resources{
 
 }
 
+div#recipe{
+    position: fixed;
+    top: 25%;
+    left: 10%;
+    color: white;
+}
+
 a#healthy_resources{
 
 }
@@ -165,6 +172,18 @@ form.box{
     background: rgba(54, 25, 25, .5);
     margin: auto;
 }
+
+div.box{
+    padding: 20px;
+    width: 30%;
+    background: rgba(54, 25, 25, .5);
+    margin: auto;
+}
+
+/*img.rec_image {
+  position: fixed;
+  left: 45%;
+}*/
 
 .center {
     text-align: center;

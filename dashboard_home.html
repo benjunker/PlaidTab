@@ -7,6 +7,7 @@
 	<script src="script.js"></script> <!-- Our script file -->
 	<script src="facebook_init.js"></script>
 	<script src="recipe.js"></script>
+	<script type="text/javascript" src="healthy_recipes.js"></script>
 	<title>PlaidTab</title>
 
 </head>
@@ -45,6 +46,12 @@
 		    	<input type=checkbox id="toggleEvents" onclick="javascript:toggleEvents();" value="Toggle"></button>
 		    	<div class="slider round"></div>
 			</label>
+
+			<p id="toggleRecipe">Toggle Recipe</p>
+		    <label class="switch">
+		    	<input type=checkbox id="toggleRecipe" onclick="javascript:toggleRecipe();" value="Toggle"></button>
+		    	<div class="slider round"></div>
+			</label>
 		   
 		  </div>
 
@@ -73,6 +80,12 @@
 	</div>
 	<div id="healthy_resources">
 		<a id="healthy_resources" href="#" onclick="healthyResourcesButton();">Healthy Resources</a>
+	</div>
+	<div id="recipe" class="box">
+		<h3 class="center">Try This Healthy Recipe!</h3>
+		<p id="recipe_name" class="center"></p>
+		<img id="rec_image" class="event" src=""><br>
+		<a id="rec_href" class="center" style="align: center" href="">Click Here to Try!</a>
 	</div>
 	<div id="settings">
 		<button type="button" id="settingsButton" onclick="settingsButton();"><img id="settings" src="img/settings.png"></button>

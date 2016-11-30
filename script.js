@@ -2,6 +2,7 @@ var eventStatus = "A"
 var onlyHW = false;
 var quote = true;
 var events = true;
+var recipe = true;
 
 
 
@@ -116,5 +117,15 @@ function toggleEvents() {
   } else {
     events = true;
     document.getElementById('events').style.display = '';
+  }
+}
+
+function toggleRecipe() {
+  if (recipe) {
+    recipe = false;
+    document.getElementById('recipe').style.display = 'none';
+  } else {
+    recipe = true;
+    document.getElementById('recipe').style.display = '';
   }
 }

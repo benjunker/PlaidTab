@@ -9,6 +9,12 @@ var quote = quotes[Math.floor(Math.random()*quotes.length)]
 document.getElementById('quote').innerHTML = quote
 
 
+//Healthy Recipe
+var recipe = recipes[Math.floor(Math.random()*recipes.length)]
+document.getElementById("recipe_name").innerHTML = recipe.title
+document.getElementById("rec_image").src = recipe.image_url
+document.getElementById("rec_href").href = recipe.source_url
+
 //Event Modal
 
 var eventmodal = document.getElementById('eventModal');
