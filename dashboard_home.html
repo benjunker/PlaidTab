@@ -20,6 +20,7 @@
 		    <span class="close" id="closeEvents">×</span>
 		    <p id="eventStatusText">Currently Displaying All Events</p><br>
 		    <input type=button id="toggleHW" onclick="javascript:toggle();" value="Change?"></button>
+		    <br><br>
 		  </div>
 
 		</div>
@@ -29,12 +30,19 @@
 		<div id="settingsModal" class="modal">
 
 		  <!-- Modal content -->
-		  <div class="modal-content">
+		  <div class="modal-content container">
 		    <span class="close" id="closeSettings">×</span>
 		    <p id="toggleQuote">Toggle Quote</p>
-		    <input type=button id="toggleQuote" onclick="javascript:toggleQuote();" value="Toggle"></button>
+		    <label class="switch">
+		    	<input type=checkbox id="toggleEvents" onclick="javascript:toggleQuote();" value="Toggle">
+		    	<div class="slider round"></div>
+			</label>
+
 		    <p id="toggleEvents">Toggle Events</p>
-		    <input type=button id="toggleEvents" onclick="javascript:toggleEvents();" value="Toggle"></button>
+		    <label class="switch">
+		    	<input type=checkbox id="toggleEvents" onclick="javascript:toggleEvents();" value="Toggle"></button>
+		    	<div class="slider round"></div>
+			</label>
 		   
 		  </div>
 
@@ -73,6 +81,7 @@
 			<h3>Campus Events</h3>
 			<button type="button" id="editEventButton" onclick="eventEditButton();"><img id="edit" src="img/edit.png"></button>
 		</div>
+		<br>
 		<div id="event_imgs">
 			<div id="event1">
 				<img class="event" src="img/events/paws_to_relax.png">
