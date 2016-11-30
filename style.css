@@ -18,9 +18,7 @@ p#quote{
     font-style: italic;
 }
 
-.center {
-	text-align: center;
-}
+
 
 input[type=text] {
 	border: none;
@@ -153,4 +151,15 @@ div#events{
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+form.box{
+    padding: 20px;
+    width: 50%;
+    background: rgba(54, 25, 25, .5);
+    margin: auto;
+}
+
+.center {
+    text-align: center;
 }
