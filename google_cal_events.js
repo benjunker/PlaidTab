@@ -1,4 +1,4 @@
-// source: https://github.com/MilanKacurak/FormatGoogleCalendar
+// source: https://github.com/MilanKacurak/FormatGoogleCalendar and https://www.tutorialspoint.com/jquery/ajax-jquery-getjson.htm
 
 
 $(document).ready(function() {
@@ -211,7 +211,7 @@ $(document).ready(function() {
 
 
 
-
+        // ---- Handling the JSON data ---
         data.items.forEach(function addToResultsArray(item) {
 
                         // if ((typeof item.start !== 'undefined') || (item.start != null)) {
