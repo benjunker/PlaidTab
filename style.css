@@ -34,7 +34,7 @@ a{
    font-weight: bold; 
 }
 
-input#begin_button{
+input#begin_button, input#toggleHW{
     background-color: #7e7e7e;
     color: white;
     border: none;
@@ -43,6 +43,10 @@ input#begin_button{
     width: 50%;
     cursor: pointer;
     font-size: 14px;
+}
+
+input#toggleHW{
+    width: 20%;
 }
 
 label {
