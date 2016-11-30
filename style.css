@@ -95,7 +95,7 @@ p.event{
     color: white;
 }
 
-button#edit{
+button#edit, button#editEventButton, button#settings, button#settingsButton{
     background: transparent;
     border-color: transparent;
 }
@@ -177,4 +177,8 @@ form.box{
 #col2 {
     float:left;
     width:50%;
+}
+
+input#setting{
+    text-align: left
 }
