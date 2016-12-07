@@ -1,6 +1,18 @@
 //Add name to top of page
+pt_start = "Welcome to PlaidTab, "
+welcome_message = ""
+chrome.storage.local.get("name_val", function(name_obj) {document.getElementById("welcome").innerHTML = (pt_start + name_obj.name_val + "!")})
+// document.getElementById("welcome").innerHTML = welcome_message
 
-document.getElementById("welcome").innerHTML = "Welcome to PlaidTab, "+sessionStorage.name+"!"
+// Set onClick events
+document.getElementById("toggleHW").onclick = function() {toggle();};
+document.getElementById("toggleQuote").onclick = function() {toggleQuote();};
+document.getElementById("toggleEvents").onclick = function() {toggleEvents();};
+document.getElementById("toggleRecipe").onclick = function() {toggleRecipe();};
+// document.getElementById("healthy_resources").onclick = function() {healthyResourcesButton();};
+// document.getElementById("settingsButton").onclick = function() {settingsButton();};
+document.getElementById("editEventButton").onclick = function() {editEventButton();};
+document.getElementById("downarrow").onclick = function() {downButton();};
 
 
 //Quotes

@@ -8,6 +8,9 @@
 	<script src="facebook_init.js"></script>
 	<script src="recipe.js"></script>
 	<script type="text/javascript" src="healthy_recipes.js"></script>
+	<script type="text/javascript" src="facebook.js"></script>
+	<script type="text/javascript" src="cmu_cal.js"></script>
+	<script type="text/javascript" src="h_and_w.js"></script>
 	<title>PlaidTab</title>
 
 </head>
@@ -22,7 +25,7 @@
 		  <div class="modal-content">
 		    <span class="close" id="closeEvents">×</span>
 		    <p id="eventStatusText">Currently Displaying All Events</p><br>
-		    <input type=button id="toggleHW" onclick="javascript:toggle();" value="Change?"></button>
+		    <input type=button id="toggleHW" value="Change?"></button>
 		    <br><br>
 		  </div>
 
@@ -35,21 +38,21 @@
 		  <!-- Modal content -->
 		  <div class="modal-content container">
 		    <span class="close" id="closeSettings">×</span>
-		    <p id="toggleQuote">Toggle Quote</p>
+		    <p id="toggleQuoteHeader">Toggle Quote</p>
 		    <label class="switch">
-		    	<input type=checkbox id="toggleEvents" onclick="javascript:toggleQuote();" value="Toggle">
+		    	<input type=checkbox id="toggleQuote" value="Toggle">
 		    	<div class="slider round"></div>
 			</label>
 
-		    <p id="toggleEvents">Toggle Events</p>
+		    <p id="toggleEventsHeader">Toggle Events</p>
 		    <label class="switch">
-		    	<input type=checkbox id="toggleEvents" onclick="javascript:toggleEvents();" value="Toggle"></button>
+		    	<input type=checkbox id="toggleEvents" value="Toggle">
 		    	<div class="slider round"></div>
 			</label>
 
-			<p id="toggleRecipe">Toggle Recipe</p>
+			<p id="toggleRecipeHeader">Toggle Recipe</p>
 		    <label class="switch">
-		    	<input type=checkbox id="toggleRecipe" onclick="javascript:toggleRecipe();" value="Toggle"></button>
+		    	<input type=checkbox id="toggleRecipe" value="Toggle">
 		    	<div class="slider round"></div>
 			</label>
 		   
@@ -79,7 +82,7 @@
 
 	</div>
 	<div id="healthy_resources">
-		<a id="healthy_resources" href="#" onclick="healthyResourcesButton();">Healthy Resources</a>
+		<a id="healthy_resources" href="#">Healthy Resources</a>
 	</div>
 
 	 <div class="row">
@@ -97,13 +100,13 @@
       </div>
 
 	<div id="settings">
-		<button type="button" id="settingsButton" onclick="settingsButton();"><img id="settings" src="img/settings.png"></button>
+		<button type="button" id="settingsButton" ><img id="settings" src="img/settings.png"></button>
 	</div>
 
 	<div id="events" class="center">
 		<div id="heading">
 			<h3>Campus Events</h3>
-			<button type="button" id="editEventButton" onclick="eventEditButton();"><img id="edit" src="img/edit.png"></button>
+			<button type="button" id="editEventButton"><img id="edit" src="img/edit.png"></button>
 		</div>
 		<br>
 		<div id="event_imgs">
@@ -121,7 +124,8 @@
 			</div>
 		</div>
 		<div id="down">
-			<button type="button" id="edit" onclick="downButton();"><img id="downarrow" src="img/downarrow.png"></button>
+			<!-- <button type="button" id="downButton"><img id="downarrow" src="img/downarrow.png"></button> -->
+			<img id="downarrow" src="img/downarrow.png">
 			
 		</div>
 	</div>
