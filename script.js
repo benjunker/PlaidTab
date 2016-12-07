@@ -1,8 +1,8 @@
 var eventStatus = "A"
 var onlyHW = false;
-var quote = true;
-var events = true;
-var recipe = true;
+var quoteTF = true;
+var eventsTF = true;
+var recipeTF = true;
 
 
 // Sets the background photo to a randomly generating image
@@ -100,31 +100,31 @@ function toggle() {
 }
 
 function toggleQuote() {
-  if (quote) {
-    quote = false;
+  if (quoteTF) {
+    quoteTF = false;
     document.getElementById('quote').innerHTML = '';
   } else {
-    quote = true;
+    quoteTF = true;
     document.getElementById('quote').innerHTML = ' "My heart is in the work" -- Andrew Carnegie ';
   }
 }
 
 function toggleEvents() {
-  if (events) {
-    events = false;
+  if (eventsTF) {
+    eventsTF = false;
     document.getElementById('events').style.display = 'none';
   } else {
-    events = true;
+    eventsTF = true;
     document.getElementById('events').style.display = '';
   }
 }
 
 function toggleRecipe() {
-  if (recipe) {
-    recipe = false;
+  if (recipeTF) {
+    recipeTF = false;
     document.getElementById('recipe').style.display = 'none';
   } else {
-    recipe = true;
+    recipeTF = true;
     document.getElementById('recipe').style.display = '';
   }
 }

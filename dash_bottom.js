@@ -3,12 +3,12 @@
 document.getElementById("welcome").innerHTML = "Welcome to PlaidTab, "+sessionStorage.name+"!"
 
 // Set onClick events
-document.getElementById("toggle").onclick = function() {toggle();};
+document.getElementById("toggleHW").onclick = function() {toggle();};
 document.getElementById("toggleQuote").onclick = function() {toggleQuote();};
 document.getElementById("toggleEvents").onclick = function() {toggleEvents();};
 document.getElementById("toggleRecipe").onclick = function() {toggleRecipe();};
-document.getElementById("healthy_resources").onclick = function() {healthyResourcesButton();};
-document.getElementById("settingsButton").onclick = function() {settingsButton();};
+// document.getElementById("healthy_resources").onclick = function() {healthyResourcesButton();};
+// document.getElementById("settingsButton").onclick = function() {settingsButton();};
 document.getElementById("editEventButton").onclick = function() {editEventButton();};
 document.getElementById("downarrow").onclick = function() {downButton();};
 
