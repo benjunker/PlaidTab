@@ -13,9 +13,7 @@ function getRandomInt(min, max) {
 }
 
 function extractName(firstname) {
-  // console.log("hi")
-  // console.log(firstname);
-  sessionStorage.setItem('name', firstname);
+  chrome.storage.local.set({'name_val': firstname}, function() {console.log("Name Saved");});
   location.href = 'dashboard_home.html';
 }
 

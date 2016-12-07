@@ -1,6 +1,8 @@
 //Add name to top of page
-
-document.getElementById("welcome").innerHTML = "Welcome to PlaidTab, "+sessionStorage.name+"!"
+pt_start = "Welcome to PlaidTab, "
+welcome_message = ""
+chrome.storage.local.get("name_val", function(name_obj) {document.getElementById("welcome").innerHTML = (pt_start + name_obj.name_val + "!")})
+// document.getElementById("welcome").innerHTML = welcome_message
 
 // Set onClick events
 document.getElementById("toggleHW").onclick = function() {toggle();};
