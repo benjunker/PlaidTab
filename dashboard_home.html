@@ -22,7 +22,7 @@
 		  <div class="modal-content">
 		    <span class="close" id="closeEvents">×</span>
 		    <p id="eventStatusText">Currently Displaying All Events</p><br>
-		    <input type=button id="toggleHW" onclick="javascript:toggle();" value="Change?"></button>
+		    <input type=button id="toggle" value="Change?"></button>
 		    <br><br>
 		  </div>
 
@@ -37,19 +37,19 @@
 		    <span class="close" id="closeSettings">×</span>
 		    <p id="toggleQuote">Toggle Quote</p>
 		    <label class="switch">
-		    	<input type=checkbox id="toggleEvents" onclick="javascript:toggleQuote();" value="Toggle">
+		    	<input type=checkbox id="toggleQuote" value="Toggle">
 		    	<div class="slider round"></div>
 			</label>
 
 		    <p id="toggleEvents">Toggle Events</p>
 		    <label class="switch">
-		    	<input type=checkbox id="toggleEvents" onclick="javascript:toggleEvents();" value="Toggle"></button>
+		    	<input type=checkbox id="toggleEvents" value="Toggle"></button>
 		    	<div class="slider round"></div>
 			</label>
 
 			<p id="toggleRecipe">Toggle Recipe</p>
 		    <label class="switch">
-		    	<input type=checkbox id="toggleRecipe" onclick="javascript:toggleRecipe();" value="Toggle"></button>
+		    	<input type=checkbox id="toggleRecipe" value="Toggle"></button>
 		    	<div class="slider round"></div>
 			</label>
 		   
@@ -79,7 +79,7 @@
 
 	</div>
 	<div id="healthy_resources">
-		<a id="healthy_resources" href="#" onclick="healthyResourcesButton();">Healthy Resources</a>
+		<a id="healthy_resources" href="#">Healthy Resources</a>
 	</div>
 	<div id="recipe" class="box">
 		<h3 class="center">Try This Healthy Recipe!</h3>
@@ -88,13 +88,13 @@
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="rec_href" class="center" style="align: center" href="">Click Here to Try!</a>
 	</div>
 	<div id="settings">
-		<button type="button" id="settingsButton" onclick="settingsButton();"><img id="settings" src="img/settings.png"></button>
+		<button type="button" id="settingsButton" ><img id="settings" src="img/settings.png"></button>
 	</div>
 
 	<div id="events" class="center">
 		<div id="heading">
 			<h3>Campus Events</h3>
-			<button type="button" id="editEventButton" onclick="eventEditButton();"><img id="edit" src="img/edit.png"></button>
+			<button type="button" id="editEventButton"><img id="edit" src="img/edit.png"></button>
 		</div>
 		<br>
 		<div id="event_imgs">
@@ -112,7 +112,8 @@
 			</div>
 		</div>
 		<div id="down">
-			<button type="button" id="edit" onclick="downButton();"><img id="downarrow" src="img/downarrow.png"></button>
+			<!-- <button type="button" id="downButton"><img id="downarrow" src="img/downarrow.png"></button> -->
+			<img id="downarrow" src="img/downarrow.png">
 			
 		</div>
 	</div>

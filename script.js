@@ -5,11 +5,10 @@ var events = true;
 var recipe = true;
 
 
-
 // Sets the background photo to a randomly generating image
 window.onload = function() {
   var rand = getRandomInt(0,6);
-  console.log(rand);
+  // console.log(rand);
   var photoOptions = ['img/background-photo1.JPG', 'img/background-photo2.jpg', 'img/background-photo3.jpg', 
                       'img/background-photo4.png', 'img/background-photo5.jpg', 'img/background-photo6.jpg',
                       'img/background-photo7.jpg']
