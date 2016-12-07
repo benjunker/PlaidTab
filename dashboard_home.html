@@ -1,8 +1,8 @@
 <!DOCTYPE html> 
 <html>
 <head> <!-- No title and meta tags are necessary for the extension -->
-
 	<link rel="stylesheet" type="text/css" href="style.css" />
+
 	<script src="jquery.min.js"></script> <!-- Including jQuery -->
 	<script src="script.js"></script> <!-- Our script file -->
 	<script src="facebook_init.js"></script>
@@ -75,7 +75,7 @@
 		</div>
 
 
-
+		<br>
 		<h1 id="welcome">Welcome to PlaidTab!</h1>
 		<p id="quote"> "My heart is in the work" -- Andrew Carnegie </p> 
 		<br>
@@ -84,12 +84,21 @@
 	<div id="healthy_resources">
 		<a id="healthy_resources" href="#">Healthy Resources</a>
 	</div>
-	<div id="recipe" class="box">
-		<h3 class="center">Try This Healthy Recipe!</h3>
-		<p id="recipe_name" class="center"></p>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img id="rec_image" class="event" src=""><br>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="rec_href" class="center" style="align: center" href="">Click Here to Try!</a>
-	</div>
+
+	 <div class="row">
+        <div class="col s12">
+          <div id="recipe" class="card">
+            <div class="card-image">
+              <img id="rec_image" class="card-img-top" src="">
+              <span id="recipe_name" class="card-title">Card Title</span>
+            </div>
+            <div class="card-action">
+              <a id="rec_href" class="btn btn-primary" style="align: center;" href="">Try it!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
 	<div id="settings">
 		<button type="button" id="settingsButton" ><img id="settings" src="img/settings.png"></button>
 	</div>
