@@ -37,13 +37,6 @@ function saveChanges() {
         });
       }
 
-function extractName(firstname) {
-  // console.log("hi")
-  // console.log(firstname);
-  sessionStorage.setItem('name', firstname);
-  location.href = 'dashboard_home.html';
-}
-
 function healthyResourcesButton() {
   console.log("hi");
 
