@@ -1,8 +1,39 @@
 //Add name to top of page
+pt_start = "Welcome to PlaidTab, "
+welcome_message = ""
+chrome.storage.local.get("name_val", function(name_obj) {document.getElementById("welcome").innerHTML = (pt_start + name_obj.name_val + "!")})
+// document.getElementById("welcome").innerHTML = welcome_message
 
-document.getElementById("welcome").innerHTML = "Welcome to PlaidTab, "+sessionStorage.name+"!"
+// Set onClick events
+document.getElementById("toggleHW").onclick = function() {toggle();};
+document.getElementById("toggleQuote").onclick = function() {toggleQuote();};
+document.getElementById("toggleEvents").onclick = function() {toggleEvents();};
+document.getElementById("toggleRecipe").onclick = function() {toggleRecipe();};
+// document.getElementById("healthy_resources").onclick = function() {healthyResourcesButton();};
+// document.getElementById("settingsButton").onclick = function() {settingsButton();};
+document.getElementById("editEventButton").onclick = function() {editEventButton();};
+document.getElementById("downarrow").onclick = function() {downButton();};
 
 
+//Quotes
+var quotes = ['"My heart is in the work" -- Andrew Carnegie', '"We cannot change the cards we are dealt,\njust how we play the hand.” -- Randy Pausch', '"It\'s not how hard you hit. It\'s how hard you get hit...and keep moving forward.” -- Randy Pausch']
+var fit_quote = ['"Reading is to the mind what exercise is to the body." -- Joseph Addison', ]
+var sleepy_quotes = ['"Think in the morning. Act in the noon. Eat in the evening. Sleep in the night." -- William Blake']
+//“I love sleep. My life has the tendency to fall apart when I\'m awake, you know?” ― Ernest Hemingway
+//"Sleep is that golden chain that ties health and our bodies together." -- Thomas Dekker
+//"Sleep is the best meditation." -- Dalai Lama
+//Physical fitness is not only one of the most important keys to a healthy body, it is the basis of dynamic and creative intellectual activity. John F. Kennedy
+//Jogging is very beneficial. It's good for your legs and your feet. It's also very good for the ground. If makes it feel needed. Charles M. Schulz
+var allquotes = quotes.concat(fit_quote).concat(sleepy_quotes).concat(quotes)
+var quote = allquotes[Math.floor(Math.random()*allquotes.length)]
+document.getElementById('quote').innerHTML = quote
+
+
+//Healthy Recipe
+var recipe = recipes[Math.floor(Math.random()*recipes.length)]
+document.getElementById("recipe_name").innerHTML = recipe.title
+document.getElementById("rec_image").src = recipe.image_url
+document.getElementById("rec_href").href = recipe.source_url
 
 //Event Modal
 

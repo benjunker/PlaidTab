@@ -1,20 +1,28 @@
 <!DOCTYPE html> 
 <html>
 <head> <!-- No title and meta tags are necessary for the extension -->
-
 	<link rel="stylesheet" type="text/css" href="style.css" />
+
 	<script src="jquery.min.js"></script> <!-- Including jQuery -->
 	<script src="script.js"></script> <!-- Our script file -->
+
 	<script src="google_cal_events.js"></script> <!-- Script file for pull Google Cal events data -->
 
 	<script type = "text/javascript" 
          src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
+	<script src="facebook_init.js"></script>
+	<script src="recipe.js"></script>
+	<script type="text/javascript" src="healthy_recipes.js"></script>
+	<script type="text/javascript" src="facebook.js"></script>
+	<script type="text/javascript" src="cmu_cal.js"></script>
+	<script type="text/javascript" src="h_and_w.js"></script>
+
 	<title>PlaidTab</title>
 
 </head>
 
-<body>
+<body id = "body">
 	<div id="content" class="center">
 		<!-- Base code from: http://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal -->
 		<!-- Events Modal -->
@@ -24,7 +32,7 @@
 		  <div class="modal-content">
 		    <span class="close" id="closeEvents">×</span>
 		    <p id="eventStatusText">Currently Displaying All Events</p><br>
-		    <input type=button id="toggleHW" onclick="javascript:toggle();" value="Change?"></button>
+		    <input type=button id="toggleHW" value="Change?"></button>
 		    <br><br>
 		  </div>
 		</div>
@@ -37,15 +45,21 @@
 		  <!-- Modal content -->
 		  <div class="modal-content container">
 		    <span class="close" id="closeSettings">×</span>
-		    <p id="toggleQuote">Toggle Quote</p>
+		    <p id="toggleQuoteHeader">Toggle Quote</p>
 		    <label class="switch">
-		    	<input type=checkbox id="toggleEvents" onclick="javascript:toggleQuote();" value="Toggle">
+		    	<input type=checkbox id="toggleQuote" value="Toggle">
 		    	<div class="slider round"></div>
 			</label>
 
-		    <p id="toggleEvents">Toggle Events</p>
+		    <p id="toggleEventsHeader">Toggle Events</p>
 		    <label class="switch">
-		    	<input type=checkbox id="toggleEvents" onclick="javascript:toggleEvents();" value="Toggle"></button>
+		    	<input type=checkbox id="toggleEvents" value="Toggle">
+		    	<div class="slider round"></div>
+			</label>
+
+			<p id="toggleRecipeHeader">Toggle Recipe</p>
+		    <label class="switch">
+		    	<input type=checkbox id="toggleRecipe" value="Toggle">
 		    	<div class="slider round"></div>
 			</label>
 		   
@@ -61,14 +75,14 @@
 		  <div class="modal-content">
 		  	<span class="close" id="closeHR">×</span>
 		    <p>CMU Group-X Class Schedule</p>
-		     <p><a href="http://static.psbin.com/s/2/32vzzdhqws2yka/classschedule.pdf" text="black">CMU Group-X Class Schedule</a></p>
+		    <iframe src="https://calendar.google.com/calendar/embed?src=lc227%40cmu.edu&ctz=America/New_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>';
 		   
 		  </div>
 
 		</div>
 
 
-
+		<br>
 		<h1 id="welcome">Welcome to PlaidTab!</h1>
 		<p id="quote"> "My heart is in the work" -- Andrew Carnegie </p> 
 		<br>
@@ -87,16 +101,31 @@
 
 	</div>
 	<div id="healthy_resources">
-		<a id="healthy_resources" href="#" onclick="healthyResourcesButton();">Healthy Resources</a>
+		<a id="healthy_resources" href="#">Healthy Resources</a>
 	</div>
+
+	 <div class="row">
+        <div class="col s12">
+          <div id="recipe" class="card">
+            <div class="card-image">
+              <img id="rec_image" class="card-img-top" src="">
+              <span id="recipe_name" class="card-title">Card Title</span>
+            </div>
+            <div class="card-action">
+              <a id="rec_href" class="btn btn-primary" style="align: center;" href="">Try it!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
 	<div id="settings">
-		<button type="button" id="settingsButton" onclick="settingsButton();"><img id="settings" src="img/settings.png"></button>
+		<button type="button" id="settingsButton" ><img id="settings" src="img/settings.png"></button>
 	</div>
 
 	<div id="events" class="center">
 		<div id="heading">
 			<h3>Campus Events</h3>
-			<button type="button" id="editEventButton" onclick="eventEditButton();"><img id="edit" src="img/edit.png"></button>
+			<button type="button" id="editEventButton"><img id="edit" src="img/edit.png"></button>
 		</div>
 		<br>
 		<div id="event_imgs">
@@ -114,7 +143,8 @@
 			</div>
 		</div>
 		<div id="down">
-			<button type="button" id="edit" onclick="downButton();"><img id="downarrow" src="img/downarrow.png"></button>
+			<!-- <button type="button" id="downButton"><img id="downarrow" src="img/downarrow.png"></button> -->
+			<img id="downarrow" src="img/downarrow.png">
 			
 		</div>
 	</div>
