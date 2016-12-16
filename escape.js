@@ -1,1 +1,1 @@
-chrome.storage.local.get("name_val", function(ret_obj) {if ((ret_obj.name_val !== undefined)) {location.location = "dashboard_home.html"}})
+chrome.storage.local.get("name_val", function(ret_obj) {if ((ret_obj.name_val != undefined)) {document.location = "dashboard_home.html"}})
