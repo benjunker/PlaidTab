@@ -3,6 +3,9 @@ var onlyHW = false;
 var quoteTF = true;
 var eventsTF = true;
 var recipeTF = true;
+chrome.storage.local.get("healthy_eating_pref", function(he_obj) {
+  recipeTF = !he_obj.healthy_eating_pref;
+});
 
 
 // Sets the background photo to a randomly generating image
