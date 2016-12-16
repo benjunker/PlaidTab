@@ -37,17 +37,17 @@ function saveChanges() {
       }
 
 function healthyResourcesButton() {
-  console.log("hi");
+  // console.log("hi");
 
 }
 
 function settingsButton() {
-  console.log("hi");
+  // console.log("hi");
 
 }
 
 function eventEditButton(){
-  console.log("hi");
+  // console.log("hi");
 }
 
 // Random Function From http://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array

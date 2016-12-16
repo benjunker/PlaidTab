@@ -1,5 +1,3 @@
-// var fb = ""
-// var gcal = ""
 var campus_events = []
 var hw_events = []
 var ce_ref = 0
