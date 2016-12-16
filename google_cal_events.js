@@ -4,7 +4,7 @@
 $(document).ready(function() {
 			
   $("#load_data").click(function(event){
-    $.getJSON('https://www.googleapis.com/calendar/v3/calendars/andrew.cmu.edu_333234353933332d373938@resource.calendar.google.com/events?key=AIzaSyD8whTj2d-Qune9-DfAUoCS8FNbgMvTghg', function(data) {
+    $.getJSON('https://www.googleapis.com/calendar/v3/calendars/andrew.cmu.edu_333234353933332d373938@resource.calendar.google.com/events?timeMin=2016-12-15T10%3A00%3A00Z&key=AIzaSyD8whTj2d-Qune9-DfAUoCS8FNbgMvTghg', function(data) {
       var result = [];
       var config;
       var dayNames = true;

@@ -5,10 +5,6 @@
 
 	<script src="jquery.min.js"></script> <!-- Including jQuery -->
 	<script src="script.js"></script> <!-- Our script file -->
-
-	<script src="google_cal_events.js"></script> <!-- Script file for pull Google Cal events data -->
-
-	<script src="facebook_init.js"></script>
 	<script src="recipe.js"></script>
 	<script type="text/javascript" src="healthy_recipes.js"></script>
 	<script type="text/javascript" src="facebook.js"></script>
@@ -20,6 +16,7 @@
 </head>
 
 <body id = "body">
+	<script src="facebook_init.js"></script>
 	<div id="content" class="center">
 		<!-- Base code from: http://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal -->
 		<!-- Events Modal -->
@@ -86,10 +83,10 @@
 
 
 		<!-- Displaying Raw events data from www.cmu.edu/events Google calendar -->
-		<form id = "stage" class="box" style = "color: #FFF; align:center; width:60%">
-        <label>Get Google Calendar event data from www.cmu.edu/events</label>
-        <input type = "button" id = "load_data" value = "Load Data" />	
-        </form>
+		<!-- <form id = "stage" class="box" style = "color: #FFF; align:center; width:60%"> -->
+        <!-- <label>Get Google Calendar event data from www.cmu.edu/events</label> -->
+        <!-- <input type = "button" id = "load_data" value = "Load Data" />	 -->
+        <!-- </form> -->
 		
       		
 
@@ -127,6 +124,26 @@
 		<br>
 		<div id="event_imgs">
 			<div id="event1">
+				<a href="#">
+					<img class="event">
+					<p class="event"></p>
+				</a>
+			</div>
+			<div id="event2">
+				<a href="#">
+					<img class="event">
+					<p class="event"></p>
+				</a>
+			</div>
+			<div id="event3">
+				<a href="#">
+					<img class="event">
+					<p class="event"></p>
+				</a>
+			</div>
+		</div>
+		<!-- <div id="event_imgs">
+			<div id="event1">
 				<img class="event" src="img/events/paws_to_relax.png">
 				<p class="event">Paws to Relax</p>
 			</div>
@@ -138,7 +155,7 @@
 				<img class="event" src="img/events/makonnen.png">
 				<p class="event">ILOVEMAKONNEN</p>
 			</div>
-		</div>
+		</div> -->
 		<div id="down">
 			<!-- <button type="button" id="downButton"><img id="downarrow" src="img/downarrow.png"></button> -->
 			<img id="downarrow" src="img/downarrow.png">
@@ -148,4 +165,5 @@
 
 </body>
 <script src="dash_bottom.js"></script>
+<script src="compile_events.js"></script>
 </html>
