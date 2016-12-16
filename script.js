@@ -157,6 +157,7 @@ function toggleEvents() {
   }
 }
 
+
 function toggleRecipe() {
   if (recipeTF) {
     recipeTF = false;
@@ -166,3 +167,5 @@ function toggleRecipe() {
     document.getElementById('recipe').style.display = '';
   }
 }
+
+
