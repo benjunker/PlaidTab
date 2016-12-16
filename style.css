@@ -150,7 +150,7 @@ input[type=text] {
 
 a{
    color: white;
-   font-weight: bold; 
+   font-family: "AvenirNext-DemiBold";
 }
 
 input#toggleHW{
@@ -198,17 +198,28 @@ img#settings{
 }
 
 img.event{
-    width: 15%;
-    height: 15%;   
+    width: 90px;
+    height: 90px;
+    border-radius: 50%   
 }
 
 img#downarrow{
-    width: 10%;
-    height: 10%; 
+    width: 15%;
+    height: 15%;
+    border: 1px black; 
+    border-radius: 100px;
+    border: 1px solid white;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    float: bottom;
 }
 
 p.event{
     color: white;
+    font-weight: normal;
+    font-size: 10px;
+    font-family: "AvenirNext-Regular";
+    margin-right: 10%;
 }
 
 button#edit, button#editEventButton, button#settings, button#settingsButton{
@@ -506,4 +517,13 @@ h1#welcome {
 
 html{
   font-family: "Avenir Next";
+}
+
+div#events_box{
+    height:100vh;
+}
+
+div#groupx h3{
+  color: black;
+  font-size: 20px;
 }
