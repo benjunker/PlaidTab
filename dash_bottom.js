@@ -1,7 +1,3 @@
-// Handles the preferences from the login page
-toggleRecipe();
-
-
 //Add name to top of page
 pt_start = "Welcome to PlaidTab, "
 welcome_message = ""
@@ -19,6 +15,8 @@ chrome.storage.local.get("name_val", function(name_obj) {document.getElementById
 // Set onClick events
 document.getElementById("toggleHW").onclick = function() {toggle();};
 document.getElementById("toggleQuote").onclick = function() {toggleQuote();};
+document.getElementById("toggleSleepQuote").onclick = function() {toggleSleepQuote();};
+document.getElementById("toggleFitnessQuote").onclick = function() {toggleFitnessQuote();};
 document.getElementById("toggleEvents").onclick = function() {toggleEvents();};
 document.getElementById("toggleRecipe").onclick = function() {toggleRecipe();};
 // document.getElementById("healthy_resources").onclick = function() {healthyResourcesButton();};

@@ -4,7 +4,13 @@ var quoteTF = true;
 var eventsTF = true;
 var recipeTF = true;
 chrome.storage.local.get("healthy_eating_pref", function(he_obj) {
-  recipeTF = !he_obj.healthy_eating_pref;
+  recipeTF = he_obj.healthy_eating_pref;
+  if (recipeTF) {
+    document.getElementById('recipe').style.display = '';
+  } else {
+    document.getElementById('recipe').style.display = 'none';
+
+  }
 });
 
 
@@ -170,6 +176,83 @@ function toggleRecipe() {
   } else {
     recipeTF = true;
     document.getElementById('recipe').style.display = '';
+  }
+}
+
+function toggleSleepQuote() {
+  if (sleep_pref) {
+    sleep_pref = false;
+    chrome.storage.local.set({'sleep_pref': false}, function() { });
+    if (fitness_pref && (!sleep_pref)) {
+    console.log("hi");
+    allquotes = quotes.concat(fit_quote).concat(quotes);
+    } else if (sleep_pref && !fitness_pref) {
+        allquotes = quotes.concat(sleepy_quotes).concat(quotes);
+    } else if (!sleep_pref && !fitness_pref) {
+        console.log("h2");
+        allquotes = quotes.concat(quotes);
+    } else {
+        allquotes = quotes.concat(fit_quote).concat(sleepy_quotes).concat(quotes);
+    }
+
+    var quote = allquotes[Math.floor(Math.random()*allquotes.length)]
+    document.getElementById('quote').innerHTML = quote
+  } else {
+    sleep_pref = true;
+    chrome.storage.local.set({'sleep_pref': true}, function() { });
+    if (fitness_pref && (!sleep_pref)) {
+    console.log("hi");
+    allquotes = quotes.concat(fit_quote).concat(quotes);
+    } else if (sleep_pref && !fitness_pref) {
+        allquotes = quotes.concat(sleepy_quotes).concat(quotes);
+    } else if (!sleep_pref && !fitness_pref) {
+        console.log("h2");
+        allquotes = quotes.concat(quotes);
+    } else {
+        allquotes = quotes.concat(fit_quote).concat(sleepy_quotes).concat(quotes);
+    }
+
+    var quote = allquotes[Math.floor(Math.random()*allquotes.length)]
+    document.getElementById('quote').innerHTML = quote
+  }
+}
+
+
+function toggleFitnessQuote() {
+  if (fitness_pref) {
+    fitness_pref = false;
+    chrome.storage.local.set({'fitness_pref': false}, function() { });
+    if (fitness_pref && (!sleep_pref)) {
+    console.log("hi");
+    allquotes = quotes.concat(fit_quote).concat(quotes);
+    } else if (sleep_pref && !fitness_pref) {
+        allquotes = quotes.concat(sleepy_quotes).concat(quotes);
+    } else if (!sleep_pref && !fitness_pref) {
+        console.log("h2");
+        allquotes = quotes.concat(quotes);
+    } else {
+        allquotes = quotes.concat(fit_quote).concat(sleepy_quotes).concat(quotes);
+    }
+
+    var quote = allquotes[Math.floor(Math.random()*allquotes.length)]
+    document.getElementById('quote').innerHTML = quote
+  } else {
+    fitness_pref = true;
+    chrome.storage.local.set({'fitness_pref': true}, function() { });
+    if (fitness_pref && (!sleep_pref)) {
+    console.log("hi");
+    allquotes = quotes.concat(fit_quote).concat(quotes);
+    } else if (sleep_pref && !fitness_pref) {
+        allquotes = quotes.concat(sleepy_quotes).concat(quotes);
+    } else if (!sleep_pref && !fitness_pref) {
+        console.log("h2");
+        allquotes = quotes.concat(quotes);
+    } else {
+        allquotes = quotes.concat(fit_quote).concat(sleepy_quotes).concat(quotes);
+    }
+
+    var quote = allquotes[Math.floor(Math.random()*allquotes.length)]
+    document.getElementById('quote').innerHTML = quote
   }
 }
 
