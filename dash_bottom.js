@@ -1,8 +1,20 @@
+// Handles the preferences from the login page
+toggleRecipe();
+
+
 //Add name to top of page
 pt_start = "Welcome to PlaidTab, "
 welcome_message = ""
 chrome.storage.local.get("name_val", function(name_obj) {document.getElementById("welcome").innerHTML = (pt_start + name_obj.name_val + "!")})
 // document.getElementById("welcome").innerHTML = welcome_message
+
+// chrome.storage.local.get("name_val", function(name_obj) {console.log(name_obj.name_val)});
+// chrome.storage.local.get("healthy_eating_pref", function(he_obj) {console.log(he_obj.healthy_eating_pref)});
+// chrome.storage.local.get("fitness_pref", function(fitness_obj) {console.log(fitness_obj.fitness_pref)});
+// chrome.storage.local.get("sleep_pref", function(sleep_obj) {console.log(sleep_obj.sleep_pref)});
+
+
+
 
 // Set onClick events
 document.getElementById("toggleHW").onclick = function() {toggle();};

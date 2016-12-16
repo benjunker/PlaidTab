@@ -16,5 +16,47 @@ function extractName(firstname) {
   location.href = 'dashboard_home.html';
 }
 
+
+// var fitness = "";
+// if (document.getElementById("setting_fitness").checked == true) {
+// 	fitness = "true";
+// } else {
+// 	fitness = "false";
+// }
+
+
+chrome.storage.local.set({'healthy_eating_pref': false}, function() {console.log();});
+chrome.storage.local.set({'fitness_pref': false}, function() {console.log();});
+chrome.storage.local.set({'sleep_pref': false}, function() {console.log();});
+
+
+
+function extractHealthyEating(healthyeating) {
+  chrome.storage.local.set({'healthy_eating_pref': healthyeating}, function() {console.log(healthyeating);});
+  //location.href = 'dashboard_home.html';
+}
+
+function extractFitness(fitness) {
+  chrome.storage.local.set({'fitness_pref': fitness}, function() {console.log(fitness);});
+  //location.href = 'dashboard_home.html';
+}
+
+function extractSleep(sleep) {
+  chrome.storage.local.set({'sleep_pref': sleep}, function() {console.log(sleep);});
+  //location.href = 'dashboard_home.html';
+}
+
+
+
 document.getElementById("begin_button").onclick = function() {extractName(document.getElementById("name_input").value);};
+document.getElementById("setting_healthy_eating").onclick = function() {extractHealthyEating(document.getElementById("setting_healthy_eating").checked);};
+document.getElementById("setting_fitness").onclick = function() {extractFitness(document.getElementById("setting_fitness").checked);};
+document.getElementById("setting_sleep").onclick = function() {extractSleep(document.getElementById("setting_sleep").checked);};
+
+
+
 document.getElementById("begin_button").href = "dashboard_home.html";
+
+
+
+
