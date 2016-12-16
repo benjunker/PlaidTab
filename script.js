@@ -41,7 +41,9 @@ chrome.storage.local.get("sleep_pref", function(he_obj) {
 window.onload = function() {
   var rand = getRandomInt(0,5);
   // console.log(rand);
-  var photoOptions = ['img/background-photo1.JPG', 'img/background-photo2.jpg', 'img/background-photo3.jpg', 
+  // All photos from: http://www.cmu.edu/news/resources/stock-photos/
+  // © Carnegie Mellon University. All rights reserved.
+  var photoOptions = ['img/background-photo1.jpg', 'img/background-photo2.jpg', 'img/background-photo3.jpg', 
                       'img/background-photo4.jpg', 'img/background-photo5.jpg', 'img/background-photo6.jpg']
   document.getElementById('body').style.backgroundImage = ("url(" + photoOptions[rand] + ")");
 }
@@ -201,10 +203,12 @@ function toggleRecipe() {
     recipeTF = false;
     document.getElementById("toggleRecipe").checked = false;
     document.getElementById('recipe').style.display = 'none';
+    chrome.storage.local.set({'healthy_eating_pref': false}, function() {console.log();});
   } else {
     recipeTF = true;
     document.getElementById("toggleRecipe").checked = true;
     document.getElementById('recipe').style.display = '';
+    chrome.storage.local.set({'healthy_eating_pref': true}, function() {console.log();});
   }
 }
 
