@@ -38,12 +38,15 @@ var setupEvents = function() {
   // console.log(campus_events)
   hw_events = shuffle(hw_parsed.events)
   //indicies already set
-  document.getElementById('event1').children[0].src = campus_events[ce_ref].picture;
-  document.getElementById('event1').children[1].innerHTML = campus_events[ce_ref].name;
-  document.getElementById('event2').children[0].src = "img/health_wellness.png";//NEED TO CHANGE
-  document.getElementById('event2').children[1].innerHTML = hw_events[hw_ref].name;
-  document.getElementById('event3').children[0].src = campus_events[ce_ref+1].picture;
-  document.getElementById('event3').children[1].innerHTML = campus_events[ce_ref+1].name;
+  document.getElementById('event1').children[0].children[0].src = campus_events[ce_ref].picture;
+  document.getElementById('event1').children[0].href = campus_events[ce_ref].link;
+  document.getElementById('event1').children[0].children[1].innerHTML = campus_events[ce_ref].name;
+  document.getElementById('event2').children[0].children[0].src = "img/health_wellness.png";//NEED TO CHANGE
+  document.getElementById('event2').children[0].href = hw_events[hw_ref].link;
+  document.getElementById('event2').children[0].children[1].innerHTML = hw_events[hw_ref].name;
+  document.getElementById('event3').children[0].children[0].src = campus_events[ce_ref+1].picture;
+  document.getElementById('event3').children[0].href = campus_events[ce_ref+1].link;
+  document.getElementById('event3').children[0].children[1].innerHTML = campus_events[ce_ref+1].name;
 }
 
 

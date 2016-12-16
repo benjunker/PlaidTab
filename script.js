@@ -66,12 +66,15 @@ function shuffle(array) {
 function downButton(){
   if (onlyHW) {
     hw_ref = (hw_ref+3)%hw_events.length
-    document.getElementById('event1').children[0].src = "img/health_wellness.png";//NEED TO CHANGE
-    document.getElementById('event1').children[1].innerHTML = hw_events[hw_ref].name;
-    document.getElementById('event2').children[0].src = "img/health_wellness.png";//NEED TO CHANGE
-    document.getElementById('event2').children[1].innerHTML = hw_events[(hw_ref+1)%hw_events.length].name;
-    document.getElementById('event3').children[0].src = "img/health_wellness.png";//NEED TO CHANGE
-    document.getElementById('event3').children[1].innerHTML = hw_events[(hw_ref+2)%hw_events.length].name;
+    document.getElementById('event1').children[0].children[0].src = "img/health_wellness.png";//NEED TO CHANGE
+    document.getElementById('event1').children[0].href = hw_events[hw_ref].link;
+    document.getElementById('event1').children[0].children[1].innerHTML = hw_events[hw_ref].name;
+    document.getElementById('event2').children[0].children[0].src = "img/health_wellness.png";//NEED TO CHANGE
+    document.getElementById('event2').children[0].href = hw_events[(hw_ref+1)%hw_events.length].link;
+    document.getElementById('event2').children[0].children[1].innerHTML = hw_events[(hw_ref+1)%hw_events.length].name;
+    document.getElementById('event3').children[0].children[0].src = "img/health_wellness.png";//NEED TO CHANGE
+    document.getElementById('event3').children[0].href = hw_events[(hw_ref+2)%hw_events.length].link;
+    document.getElementById('event3').children[0].children[1].innerHTML = hw_events[(hw_ref+2)%hw_events.length].name;
   } else {
     hw_ref = (hw_ref+1)%hw_events.length
     ce_ref = (ce_ref+2)%campus_events.length
@@ -79,12 +82,15 @@ function downButton(){
     ce1 = evs.pop()
     hw = evs.pop()
     ce2 = evs.pop()
-    document.getElementById(ce1).children[0].src = campus_events[ce_ref].picture;
-    document.getElementById(ce1).children[1].innerHTML = campus_events[ce_ref].name;
-    document.getElementById(hw).children[0].src = "img/health_wellness.png";//NEED TO CHANGE
-    document.getElementById(hw).children[1].innerHTML = hw_events[hw_ref].name;
-    document.getElementById(ce2).children[0].src = campus_events[(ce_ref+1)%campus_events.length].picture;
-    document.getElementById(ce2).children[1].innerHTML = campus_events[(ce_ref+1)%campus_events.length].name;
+    document.getElementById(ce1).children[0].children[0].src = campus_events[ce_ref].picture;
+    document.getElementById(ce1).children[0].href = campus_events[ce_ref].link;
+    document.getElementById(ce1).children[0].children[1].innerHTML = campus_events[ce_ref].name;
+    document.getElementById(hw).children[0].children[0].src = "img/health_wellness.png";//NEED TO CHANGE
+    document.getElementById(hw).children[0].href = hw_events[hw_ref].link;
+    document.getElementById(hw).children[0].children[1].innerHTML = hw_events[hw_ref].name;
+    document.getElementById(ce2).children[0].children[0].src = campus_events[(ce_ref+1)%campus_events.length].picture;
+    document.getElementById(ce2).children[0].href = campus_events[(ce_ref+1)%campus_events.length].link;
+    document.getElementById(ce2).children[0].children[1].innerHTML = campus_events[(ce_ref+1)%campus_events.length].name;
   }
   // if (eventStatus=="A") {
   //   document.getElementById('event1').children[0].src = "img/events/meditation.png"
