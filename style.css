@@ -389,7 +389,7 @@ input:checked + .slider:before {
 
 .card .card-image .card-title {
   color: #fff;
-  text-shadow: 0 0 3px #FF0000;
+  text-shadow: 0px 0px 3px #000;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -428,7 +428,11 @@ a#rec_href{
 
 p#quote{
   font-size: 18px;
-      text-shadow: 2px 2px #696969;
+  text-shadow: 0px 0px 3px #000;
+  position: fixed;
+  left: 10%;
+  right: 10%;
+  bottom: 5%;
 
 }
 
@@ -463,8 +467,17 @@ a#rec_href{
   -webkit-text-stroke: 0px black;
 }
 
-#welcome {
-  font-size: 4rem;
+h1#welcome {
+  font-size: 55px;
+  font-weight: normal;
+  font-family: 'AvenirNext-DemiBold';
+  text-shadow: 0px 0px 3px #000;
+  position: fixed;
+  left: 10%;
+  right: 10%;
+  top: 35%;
+  bottom: 10%;
+
 }
 
 html{
