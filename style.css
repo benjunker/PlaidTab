@@ -301,6 +301,14 @@ div.box{
     float:left;
     width:100%;
 }
+
+div#setting_toggle{
+  width: 20%;
+  position: absolute;
+  left: 2%;
+  bottom: 20%;
+}
+
 #col1 {
     float:left;
     width:50%;
