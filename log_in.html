@@ -10,32 +10,28 @@
 </head>
 
 <body id = "body">
-	<div id="content" class="center">
-		<h1>Welcome to PlaidTab!</h1>
-		<br>
-		<form class="box">
+	<div id="content">
+		<h1 id="login" class="center">Welcome to PlaidTab!</h1>
+		<h3 id= "login_desc">PlaidTab is designed specifically for you. It's a CMU-specific new tab extension that offers you a pick-me-up and a burst of motivation when you need it most. PlaidTab is the dashboard for every CMU student, highly customizable, and made to fit...you.</h3>
+			<br>
+		<form id="login" class="box left">
 			<br>
 
-			<h3>PlaidTab is designed specifically for you. It's a CMU-specific new tab extension that offers you a pick-me-up and a burst of motivation when you need it most. PlaidTab is the dashboard for every CMU student, highly customizable, and made to fit...you.</h3>
-			<br>
-
-
-
-			<label for="name">Your Name:</label>
+			<label id="name" for="name">Your Name:</label>
 			<input type="text" id="name_input">
 			<br><br>
 
-			<h2>What else do you care most about?</h2>
+			<h2 id="login">What else do you care most about?</h2>
 
 			<div id="container">
 
-				<div >
-					<input id="setting_healthy_eating" type="checkbox" name="healthy_eating" value="Healthy Eating"><label for="Healthy Eating">Healthy Eating</label>
+				<div id="login_checkbox">
+					<input id="setting_healthy_eating" type="checkbox" name="healthy_eating" value="Healthy Eating"><label id="healthy_eating" for="Healthy Eating">Healthy Eating</label>
 					<br>
 
-					<input id="setting_fitness" type="checkbox" name="fitness" value="0"><label for="fitness">Fitness</label>
+					<input id="setting_fitness" type="checkbox" name="fitness" value="0"><label id="fitness" for="fitness">Fitness</label>
 					<br>
-					<input id="setting_sleep" type="checkbox" name="sleep_reminders" value="Sleep Reminders"><label for="sleep_reminders">Sleep</label>
+					<input id="setting_sleep" type="checkbox" name="sleep_reminders" value="Sleep Reminders"><label for="sleep_reminders" id="sleep">Sleep</label>
 					<br>
 					<br>
 				</div>
@@ -44,7 +40,7 @@
 			</div>
 
 			<!-- <a id="begin_button" href="dashboard_home.html" onclick="extractName(firstname.value);">Let's Begin</a> -->
-			<input type=button id="begin_button" value="Let's Begin!">
+			<input type=button id="begin_button" value="Let's Begin!" align="center">
 		
 		</form>
 

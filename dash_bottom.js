@@ -38,8 +38,10 @@ var sleepy_quotes = ['"Think in the morning. Act in the noon. Eat in the evening
 var allquotes = quotes.concat(fit_quote).concat(sleepy_quotes).concat(quotes);
 
 var fitness_pref = true;
+document.getElementById("toggleFitnessQuote").checked = true;
 // chrome.storage.local.get("fitness_pref", function(fitness_obj) {console.log(fitness_obj.fitness_pref)});
 var sleep_pref = true; 
+document.getElementById("toggleSleepQuote").checked = true;
 // chrome.storage.local.get("sleep_pref", function(sleep_obj) {console.log(sleep_obj.sleep_pref)});
 
 chrome.storage.local.get("fitness_pref", function(fitness_obj) {

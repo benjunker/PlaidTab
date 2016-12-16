@@ -3,16 +3,39 @@ var onlyHW = false;
 var quoteTF = true;
 var eventsTF = true;
 var recipeTF = true;
+var fitnessTF=true;
+var sleepTF=true;
 chrome.storage.local.get("healthy_eating_pref", function(he_obj) {
   recipeTF = he_obj.healthy_eating_pref;
   if (recipeTF) {
     document.getElementById('recipe').style.display = '';
+    document.getElementById("toggleRecipe").checked = true;
   } else {
     document.getElementById('recipe').style.display = 'none';
+    document.getElementById("toggleRecipe").checked = false;
 
   }
 });
 
+chrome.storage.local.get("fitness_pref", function(he_obj) {
+  fitnessTF= he_obj.fitness_pref;
+  if (fitnessTF) {
+    document.getElementById("toggleFitnessQuote").checked = true;
+  } else {
+    document.getElementById("toggleFitnessQuote").checked = false;
+
+  }
+});
+
+chrome.storage.local.get("sleep_pref", function(he_obj) {
+  sleepTF= he_obj.sleep_pref;
+  if (fitnessTF) {
+    document.getElementById("toggleSleepQuote").checked = true;
+  } else {
+    document.getElementById("toggleSleepQuote").checked = false;
+
+  }
+});
 
 // Sets the background photo to a randomly generating image
 window.onload = function() {
@@ -152,18 +175,22 @@ function toggleQuote() {
   if (quoteTF) {
     quoteTF = false;
     document.getElementById('quote').innerHTML = '';
+    document.getElementById("toggleQuote").checked = false;
   } else {
     quoteTF = true;
     document.getElementById('quote').innerHTML = ' "My heart is in the work" -- Andrew Carnegie ';
+    document.getElementById("toggleQuote").checked = true;
   }
 }
 
 function toggleEvents() {
   if (eventsTF) {
     eventsTF = false;
+    document.getElementById("toggleEvents").checked = false;
     document.getElementById('events').style.display = 'none';
   } else {
     eventsTF = true;
+    document.getElementById("toggleEvents").checked = true;
     document.getElementById('events').style.display = '';
   }
 }
@@ -172,9 +199,11 @@ function toggleEvents() {
 function toggleRecipe() {
   if (recipeTF) {
     recipeTF = false;
+    document.getElementById("toggleRecipe").checked = false;
     document.getElementById('recipe').style.display = 'none';
   } else {
     recipeTF = true;
+    document.getElementById("toggleRecipe").checked = true;
     document.getElementById('recipe').style.display = '';
   }
 }
@@ -182,6 +211,8 @@ function toggleRecipe() {
 function toggleSleepQuote() {
   if (sleep_pref) {
     sleep_pref = false;
+    sleepTF=false;
+    document.getElementById("toggleSleepQuote").checked = false;
     chrome.storage.local.set({'sleep_pref': false}, function() { });
     if (fitness_pref && (!sleep_pref)) {
     console.log("hi");
@@ -199,7 +230,9 @@ function toggleSleepQuote() {
     document.getElementById('quote').innerHTML = quote
   } else {
     sleep_pref = true;
-    chrome.storage.local.set({'sleep_pref': true}, function() { });
+    sleepTF=true;
+    document.getElementById("toggleSleepQuote").checked = true;
+    chrome.storage.local.set({'sleep_pref': true}, function() {});
     if (fitness_pref && (!sleep_pref)) {
     console.log("hi");
     allquotes = quotes.concat(fit_quote).concat(quotes);
@@ -221,6 +254,8 @@ function toggleSleepQuote() {
 function toggleFitnessQuote() {
   if (fitness_pref) {
     fitness_pref = false;
+    fitnessTF=false;
+    document.getElementById("toggleFitnessQuote").checked = false;
     chrome.storage.local.set({'fitness_pref': false}, function() { });
     if (fitness_pref && (!sleep_pref)) {
     console.log("hi");
@@ -238,6 +273,8 @@ function toggleFitnessQuote() {
     document.getElementById('quote').innerHTML = quote
   } else {
     fitness_pref = true;
+    fitnessTF=true;
+    document.getElementById("toggleFitnessQuote").checked = true;
     chrome.storage.local.set({'fitness_pref': true}, function() { });
     if (fitness_pref && (!sleep_pref)) {
     console.log("hi");

@@ -37,17 +37,17 @@
 		<div id="settingsModal" class="modal">
 
 		  <!-- Modal content -->
-		  <div class="modal-content container">
+		  <div id="setting_toggle" class="modal-content container">
 		    <span class="close" id="closeSettings">×</span>
 		    <p id="toggleQuoteHeader">Display Motivational Quote</p>
 		    <label class="switch">
-		    	<input type=checkbox id="toggleQuote" value="Toggle">
+		    	<input type=checkbox id="toggleQuote" value="Toggle" checked>
 		    	<div class="slider round"></div>
 			</label>
 
 			<p id="toggleEventsHeader">Include Sleep Quotes</p>
 		    <label class="switch">
-		    	<input type=checkbox id="toggleSleepQuote" value="Toggle">
+		    	<input type=checkbox id="toggleSleepQuote" value="Toggle" checked>
 		    	<div class="slider round"></div>
 			</label>	
 
@@ -60,7 +60,7 @@
 
 		    <p id="toggleEventsHeader">Display Campus Events</p>
 		    <label class="switch">
-		    	<input type=checkbox id="toggleEvents" value="Toggle">
+		    	<input type=checkbox id="toggleEvents" value="Toggle" checked>
 		    	<div class="slider round"></div>
 			</label>
 
@@ -79,9 +79,9 @@
 		<div id="hrModal" class="modal">
 
 		  <!-- Modal content -->
-		  <div class="modal-content">
+		  <div id="groupx" class="modal-content">
 		  	<span class="close" id="closeHR">×</span>
-		    <p>CMU Group-X Class Schedule</p>
+		    <h3>CMU Group-X Class Schedule</h3>
 		    <iframe src="https://calendar.google.com/calendar/embed?src=lc227%40cmu.edu&ctz=America/New_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>';
 		   
 		  </div>
@@ -118,11 +118,14 @@
           <div id="recipe" class="card">
             <div class="card-image">
               <img id="rec_image" class="card-img-top" src="">
-              <span id="recipe_name" class="card-title">Card Title</span>
+            </div>
+            <div class="card-content">
+            	<p id="recipe_name" class="card-title"></p>
+             
             </div>
             <div class="card-action">
-              <a id="rec_href" class="btn btn-primary" style="align: center;" href="">Try it!</a>
-            </div>
+          		<a id="rec_href" href="">Try it!</a>
+       		</div>
           </div>
         </div>
       </div>
@@ -133,7 +136,7 @@
 
 	
 	<div id="events" class="center">
-		<div class="box">
+		<div id="events_box" class="box">
 		<div id="heading">
 			<h3 id="events_section">Campus Events</h3>
 			<button type="button" id="editEventButton"><img id="edit" src="img/edit.png"></button>
