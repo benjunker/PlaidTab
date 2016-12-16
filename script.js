@@ -119,7 +119,8 @@ function toggle() {
       hw_ref = 0
       ce_ref = 0
     //     // document.getElementById("toggleHW").value = "No?";
-        document.getElementById("eventStatusText").innerHTML = "Currently Displaying Only Health & Wellness Events"
+        document.getElementById("eventStatusText").innerHTML = "Displaying Health & Wellness Events"
+        document.getElementById("events_section").innerHTML = "Health & Wellness Events"
     //     document.getElementById('event1').children[0].src = "img/events/meditation.png";
     //     document.getElementById('event1').children[1].innerHTML = "Meditation";
     //     document.getElementById('event2').children[0].src = "img/events/paws_to_relax.png";
@@ -132,7 +133,8 @@ function toggle() {
     } else {
       hw_ref = 0
       ce_ref = 0
-      document.getElementById("eventStatusText").innerHTML = "Currently Displaying All Events"
+      document.getElementById("eventStatusText").innerHTML = "Displaying All Events"
+      document.getElementById("events_section").innerHTML = "Campus Events"
       onlyHW = false;
     //   // document.getElementById("toggleHW").value = "Yes?";
     //   eventStatus = "B";
