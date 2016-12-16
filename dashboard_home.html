@@ -25,8 +25,8 @@
 		  <!-- Modal content -->
 		  <div class="modal-content">
 		    <span class="close" id="closeEvents">×</span>
-		    <p id="eventStatusText">Currently Displaying All Events</p><br>
-		    <input type=button id="toggleHW" value="Change?"></button>
+		    <p id="eventStatusText">Displaying All Events</p><br>
+		    <input type=button id="toggleHW" value="Toggle"></button>
 		    <br><br>
 		  </div>
 		</div>
@@ -39,19 +39,32 @@
 		  <!-- Modal content -->
 		  <div class="modal-content container">
 		    <span class="close" id="closeSettings">×</span>
-		    <p id="toggleQuoteHeader">Toggle Quote</p>
+		    <p id="toggleQuoteHeader">Display Motivational Quote</p>
 		    <label class="switch">
 		    	<input type=checkbox id="toggleQuote" value="Toggle">
 		    	<div class="slider round"></div>
 			</label>
 
-		    <p id="toggleEventsHeader">Toggle Events</p>
+			<p id="toggleEventsHeader">Include Sleep Quotes</p>
+		    <label class="switch">
+		    	<input type=checkbox id="toggleSleepQuote" value="Toggle">
+		    	<div class="slider round"></div>
+			</label>	
+
+			<p id="toggleEventsHeader">Include Fitness Quotes</p>
+		    <label class="switch">
+		    	<input type=checkbox id="toggleFitnessQuote" value="Toggle">
+		    	<div class="slider round"></div>
+			</label>
+
+
+		    <p id="toggleEventsHeader">Display Campus Events</p>
 		    <label class="switch">
 		    	<input type=checkbox id="toggleEvents" value="Toggle">
 		    	<div class="slider round"></div>
 			</label>
 
-			<p id="toggleRecipeHeader">Toggle Recipe</p>
+			<p id="toggleRecipeHeader">Display Healthy Recipes</p>
 		    <label class="switch">
 		    	<input type=checkbox id="toggleRecipe" value="Toggle">
 		    	<div class="slider round"></div>
@@ -95,10 +108,12 @@
 
 	</div>
 	<div id="healthy_resources">
-		<a id="healthy_resources" href="#">Healthy Resources</a>
+		<a id="healthy_resources" href="#">GroupX Schedule</a>
 	</div>
 
+	 
 	 <div class="row">
+
         <div class="col s12">
           <div id="recipe" class="card">
             <div class="card-image">
@@ -116,9 +131,11 @@
 		<button type="button" id="settingsButton" ><img id="settings" src="img/settings.png"></button>
 	</div>
 
+	
 	<div id="events" class="center">
+		<div class="box">
 		<div id="heading">
-			<h3>Campus Events</h3>
+			<h3 id="events_section">Campus Events</h3>
 			<button type="button" id="editEventButton"><img id="edit" src="img/edit.png"></button>
 		</div>
 		<br>
@@ -142,25 +159,12 @@
 				</a>
 			</div>
 		</div>
-		<!-- <div id="event_imgs">
-			<div id="event1">
-				<img class="event" src="img/events/paws_to_relax.png">
-				<p class="event">Paws to Relax</p>
-			</div>
-			<div id="event2">
-				<img class="event" src="img/events/stop_hunger.png">
-				<p class="event">CMU Stops Hunger</p>
-			</div>
-			<div id="event3">
-				<img class="event" src="img/events/makonnen.png">
-				<p class="event">ILOVEMAKONNEN</p>
-			</div>
-		</div> -->
 		<div id="down">
 			<!-- <button type="button" id="downButton"><img id="downarrow" src="img/downarrow.png"></button> -->
 			<img id="downarrow" src="img/downarrow.png">
 			
 		</div>
+	</div>
 	</div>
 
 </body>

@@ -383,3 +383,8 @@ a {text-decoration: none; }
 a#rec_href{
   -webkit-text-stroke: 0px black;
 }
+
+
+#welcome {
+  font-size: 4rem;
+}
