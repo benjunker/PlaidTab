@@ -66,13 +66,13 @@ function shuffle(array) {
 function downButton(){
   if (onlyHW) {
     hw_ref = (hw_ref+3)%hw_events.length
-    document.getElementById('event1').children[0].children[0].src = "img/health_wellness.png";//NEED TO CHANGE
+    document.getElementById('event1').children[0].children[0].src = hw_events[hw_ref].picture;
     document.getElementById('event1').children[0].href = hw_events[hw_ref].link;
     document.getElementById('event1').children[0].children[1].innerHTML = hw_events[hw_ref].name;
-    document.getElementById('event2').children[0].children[0].src = "img/health_wellness.png";//NEED TO CHANGE
+    document.getElementById('event2').children[0].children[0].src = hw_events[(hw_ref+1)%hw_events.length].picture;
     document.getElementById('event2').children[0].href = hw_events[(hw_ref+1)%hw_events.length].link;
     document.getElementById('event2').children[0].children[1].innerHTML = hw_events[(hw_ref+1)%hw_events.length].name;
-    document.getElementById('event3').children[0].children[0].src = "img/health_wellness.png";//NEED TO CHANGE
+    document.getElementById('event3').children[0].children[0].src = hw_events[(hw_ref+2)%hw_events.length].picture;
     document.getElementById('event3').children[0].href = hw_events[(hw_ref+2)%hw_events.length].link;
     document.getElementById('event3').children[0].children[1].innerHTML = hw_events[(hw_ref+2)%hw_events.length].name;
   } else {
@@ -85,7 +85,7 @@ function downButton(){
     document.getElementById(ce1).children[0].children[0].src = campus_events[ce_ref].picture;
     document.getElementById(ce1).children[0].href = campus_events[ce_ref].link;
     document.getElementById(ce1).children[0].children[1].innerHTML = campus_events[ce_ref].name;
-    document.getElementById(hw).children[0].children[0].src = "img/health_wellness.png";//NEED TO CHANGE
+    document.getElementById(hw).children[0].children[0].src = hw_events[hw_ref].picture;
     document.getElementById(hw).children[0].href = hw_events[hw_ref].link;
     document.getElementById(hw).children[0].children[1].innerHTML = hw_events[hw_ref].name;
     document.getElementById(ce2).children[0].children[0].src = campus_events[(ce_ref+1)%campus_events.length].picture;
